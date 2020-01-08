@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Formulaire</title>
+    <link rel="stylesheet" href="CSS/bootstrap.min.css">
+    <link rel="stylesheet" href="CSS/jquery-ui.min.css">
+    <link rel="stylesheet" href="CSS/animate.css">
+    <link rel="stylesheet" href="CSS/style.css">
+</head>
+
+<body>
+
+    <h1 class="text-center display-4 my-5" style="font-size: 2.8em; padding: 0 30px;" class="animated slideInDown" style="animation-delay:2s;">Validation de formulaire</h1>
+
+    <form class="mt-4">
+        <div class="row">
+            <div class="col-md-6 mb-3">
+                <label for="nom">Nom <span class="requis">*</span></label>
+                <input type="text" class="form-control validate" id="nom" class="champ" placeholder="Entrez votre nom" required minlength="5" maxlength="20">
+                <small class="form-text text-danger error" id="nom_error"></small>
+            </div>
+            <div class="col-md-6 mb-3">
+                <label for="prenom">Prenom <span class="requis">*</span></label>
+                <input type="text" class="form-control validate" id="prenom" class="champ" placeholder="Entrez votre prénom" required minlength="5" maxlength="20">
+                <small class="form-text text-danger error" id="prenom_error"></small>
+            </div>
+        </div>
+
+        <div class="mb-3">
+            <label for="email">Email <span class="requis">*</span></label>
+            <input type="email" class="form-control validate" id="email" class="champ" placeholder="Entrez votre mail" required minlength="5" maxlength="30">
+            <small class="form-text text-danger error" id="email_error"></small>
+        </div>
+
+        <div class='row'>
+            <div class="col-md-6 mb-3">
+                <label for="address">Adresse <span class="requis">*</span></label>
+                <input type="text" class="form-control validate" id="address" class="champ" placeholder="Indiquez votre address" required minlength="5" maxlength="50">
+                <button id="gps" class="btn btn-danger">GPS</button>
+                <small class="form-text text-danger error" id="address_error"></small>
+            </div>
+            <div class="col-md-6 mb-3">
+                <label for="datepicker">Date de Naissance<span class="requis">*</span></label>
+                <input type="date" class="form-control validate" class="champ" id="datepicker" placeholder="14/02/1995">
+                <small class="form-text text-danger error" id="datepicker_error"></small>
+            </div>
+        </div>
+
+        <div class="text-center mt-3">
+            <button class="btn btn-lg" type="submit" id="send" data-toggle="modal" data-target="#myModal">Valider</button>
+        </div>
+    </form>
+
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalExemple" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="myModalTitle"></h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                </div>
+                <div class="modal-body"></div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-outline-dark" data-dismiss="modal">OK</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div id="map" style="text-align: center;margin-top: 20px;"></div>
+    <div class="col-6 my-table" style="margin-left: 25%;">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">Last Name</th>
+                    <th scope="col">First Name</th>
+                    <th scope="col">birthDay</th>
+                    <th scope="col">Address</th>
+                    <th scope="col">E-Mail</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+    </div>
+    </div>
+
+    </div>
+
+    <script src="JS/jquery.js"></script>
+    <script src="JS/bootstrap.min.js"></script>
+    <script src="JS/popper.min.js"></script>
+    <script src="JS/script.js"></script>
+    <script src="JS/gps.js"></script>
+    <script src="JS/gpsimpl.js"></script>
+    <script src="JS/store.js"></script>
+
+    <script>
+    </script>
+</body>
+
+</html>

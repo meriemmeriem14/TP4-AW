@@ -1,0 +1,22 @@
+body{
+    box-sizing: border-box;        
+    margin: 5vh 0 0 0;
+}
+form, .alert {
+    width: 65%;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+#resultat {
+    width: 40%;
+    line-height: 1em;
+    padding: 10px 0;
+}
+.requis {
+    color: red;
+}
+@media screen and (max-width: 766px) {
+    form, .alert {
+        width: 90%;
+    }
+}
